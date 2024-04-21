@@ -1,0 +1,278 @@
+const billAmount = document.querySelector(".bill-input");
+const totalPeople = document.querySelector(".tpeople");
+
+const tipValue1 = document.querySelector(".tip-value1");
+const tipValue2 = document.querySelector(".tip-value2");
+const customInput = document.querySelector(".custom-input");
+const errorMsg = document.querySelector(".error-msg");
+const tpeopleInput = document.querySelector(".tpeople");
+const tipAmount = document.querySelector(".tip-amount");
+const totalBill = document.querySelector(".total-amount");
+const resetButton = document.querySelector(".reset-btn");
+
+
+billAmount.addEventListener("keypress", function(event) {
+  AllowOnlyDigits(event);
+});
+
+totalPeople.addEventListener("keypress", function(event) {
+  // Check if the key pressed is a digit (0-9) or backspace
+  if (!/\d/.test(event.key) && event.key !== "Backspace") { //prevent decimal values
+      event.preventDefault(); // Prevent invalid character insertion
+  }
+});
+
+billAmount.addEventListener("focus", function() {
+  SetColAndHidePlacHolder(this);
+  this.style.fontWeight = 700;
+});
+
+billAmount.addEventListener("blur", function() {
+  SetColAndHidePlacHolder(this);
+});
+
+totalPeople.addEventListener("focus", function() {
+  SetColAndHidePlacHolder(this);
+  this.style.fontWeight = 700;
+});
+
+totalPeople.addEventListener("blur", function() {
+  SetColAndHidePlacHolder(this);
+});
+
+//Capture bill and total people values
+var billValue = 0;
+billAmount.addEventListener("input", function(event) {
+    const typedValue = event.target.value;
+    console.log("Typed value:", typedValue);
+    billValue = typedValue;
+  });
+
+var totalPeopleValue = 0;
+totalPeople.addEventListener("input", function(event) {
+    const typedPeopleValue = event.target.value;
+    console.log("Typed people value:", typedPeopleValue);
+    totalPeopleValue = typedPeopleValue;
+});
+
+// Attach click event listeners to each child element of .tip-value1
+// tipValue1.querySelectorAll("div").forEach(child => {
+//   child.addEventListener("click", function() {
+//     CalculateTip(child);
+//   });
+// });
+
+// // Attach click event listeners to each child element of .tip-value2
+// tipValue2.querySelectorAll("div").forEach(child => {
+//   child.addEventListener("click", function() {
+//     CalculateTip(child);
+//   });
+// });
+
+customInput.addEventListener("click", function() {
+    ResetTipAndBill();
+  });
+
+
+customInput.addEventListener("keypress", (event) => {
+  if (!/\d/.test(event.key) && event.key !== "Backspace") {
+    event.preventDefault(); // Prevent invalid character insertion
+  }
+});
+
+//calculate tip and total bill for custome input
+customInput.addEventListener("keyup", () => {
+  if(customInput.value == "")
+        tipAmount.innerHTML = `$0.00`;
+  if((customInput.value != "") && (Number(customInput.value) != 0)){
+    if (tpeopleInput.value == 0 || tpeopleInput.value == "") {
+      errorMsg.style.display = "block"; // Show error message
+      totalPeople.style.border = "1.4px solid #DC7E64";
+    }else{
+      errorMsg.style.display = "none"; // Show error message
+      totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+      console.log();
+      let typedcustomInput = Number(customInput.value)/100;
+      console.log(((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2))
+      let customTip = ((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2)
+      let tBillPerPerson = ((Number(billValue)/Number(totalPeopleValue))+Number(customTip)).toFixed(2);
+      tipAmount.innerHTML = `$${customTip}`;
+      totalBill.innerHTML = `$${tBillPerPerson}`;
+    }
+    
+  }
+});
+
+resetButton.addEventListener("click", function() {
+  ResetTipAndBill();
+});
+
+tpeopleInput.addEventListener("keyup", function() {
+  if(((customInput.value !== "" && customInput.value !== "0") && (billAmount.value !== "" && billAmount.value !== "0")) && (tpeopleInput.value !== "" && tpeopleInput.value !== "0")){
+    errorMsg.style.display = "none"; 
+    totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+    let typedcustomInput = Number(customInput.value)/100;
+    console.log(((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2))
+    let customTip = ((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2)
+    let tBillPerPerson = ((Number(billValue)/Number(totalPeopleValue))+Number(customTip)).toFixed(2);
+      tipAmount.innerHTML = `$${customTip}`;
+      totalBill.innerHTML = `$${tBillPerPerson}`;
+
+  }else{
+
+    if(tpeopleInput.value === "0"){
+      errorMsg.style.display = "block"; // Show error message
+      totalPeople.style.border = "1.4px solid #DC7E64";
+      return false;
+    }
+
+    errorMsg.style.display = "none"; 
+    totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+   
+    ResetTipAndBill();
+  }
+
+});
+
+const SetColAndHidePlacHolder = (inputElement)=> {
+  inputElement.style.color = "hsl(183, 100%, 15%)"; // Set text color on focus
+  inputElement.style.placeholder = "transparent"; // Hide placeholder on focus
+}
+
+const AllowOnlyDigits = (event) =>{
+  // Allow only digits (0-9), decimal point (.), and backspace
+  if (!/\d|\./.test(event.key) && event.key !== "Backspace") {
+    event.preventDefault(); // Prevent invalid character insertion, including minus sign
+  }
+}
+
+const CalculateTip = (child) =>{
+  if (tpeopleInput.value === "0" || tpeopleInput.value === "") {
+      errorMsg.style.display = "block"; // Show error message
+      totalPeople.style.border = "1.4px solid #DC7E64";
+  }else{
+      if(tpeopleInput.value != ""){
+        errorMsg.style.display = "none"; // Show error message
+        totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+        let innerText = child.innerHTML;
+        let splitValue = innerText.split("%");
+        let tipValue = splitValue[0];
+        console.log(typeof(tipValue));
+        console.log(typeof(billValue));
+        console.log(((Number(billValue) * Number(tipValue))/100)/Number(totalPeopleValue));
+        let limitTipValue = (((Number(billValue) * Number(tipValue))/100)/Number(totalPeopleValue)).toFixed(2);
+        let tBillPerPerson = ((Number(billValue)/Number(totalPeopleValue))+Number(limitTipValue)).toFixed(2);;
+        
+        if(Number.isNaN(limitTipValue)){
+          
+        }
+        
+        tipAmount.innerHTML = `$${limitTipValue}`;
+        totalBill.innerHTML = `$${tBillPerPerson}`;
+      }
+      
+    }
+}
+
+const ResetTipAndBill = ()=> {
+  tipAmount.innerHTML = `$0.00`;
+  totalBill.innerHTML = `$0.00`;
+}
+
+// Event delegation for tip selection/calculation of desktop version and mobile.
+document.querySelectorAll(".tip-value1 div, .tip-value2 div, .tip-value1_mobile div, .tip-value2_mobile div, .tip-value3_mobile div").forEach(child => {
+  child.addEventListener("click", function() {
+      CalculateTip(child);
+  });
+});
+
+// ----Code for mobile version---- //
+const tipValue1_Mobile = document.querySelector(".tip-value1_mobile");
+const tipValue2_Mobile = document.querySelector(".tip-value2_mobile");
+const tipValue3_Mobile = document.querySelector(".tip-value3_mobile");
+const customInput_mobile = document.querySelector(".custom-input_mobile");
+
+// tipValue1_Mobile.querySelectorAll("div").forEach(child => {
+//   child.addEventListener("click", function() {
+    
+//     CalculateTip(child);
+//   });
+// });
+// tipValue2_Mobile.querySelectorAll("div").forEach(child => {
+//   child.addEventListener("click", function() {
+    
+//     CalculateTip(child);
+//   });
+// });
+// tipValue3_Mobile.querySelectorAll("div").forEach(child => {
+//   child.addEventListener("click", function() {
+    
+//     CalculateTip(child);
+//   });
+// });
+
+
+
+customInput_mobile.addEventListener("click", function() {
+  ResetTipAndBill();
+});
+
+//calculate tip and total bill for custome input
+customInput_mobile.addEventListener("keypress", (event) => {
+if (!/\d/.test(event.key) && event.key !== "Backspace") {
+  event.preventDefault(); // Prevent invalid character insertion
+}
+});
+
+customInput_mobile.addEventListener("keyup", () => {
+if(customInput_mobile.value == "")
+      tipAmount.innerHTML = `$0.00`;
+if((customInput_mobile.value != "") && (Number(customInput_mobile.value) != 0)){
+  if (tpeopleInput.value == 0 || tpeopleInput.value == "") {
+    errorMsg.style.display = "block"; // Show error message
+    totalPeople.style.border = "1.4px solid #DC7E64";
+  }else{
+    errorMsg.style.display = "none"; // Show error message
+    totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+    console.log();
+    let typedcustomInput = Number(customInput_mobile.value)/100;
+    console.log(((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2))
+    let customTip = ((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2)
+    let tBillPerPerson = ((Number(billValue)/Number(totalPeopleValue))+Number(customTip)).toFixed(2);
+    tipAmount.innerHTML = `$${customTip}`;
+    totalBill.innerHTML = `$${tBillPerPerson}`;
+  }
+  
+}
+});
+
+tpeopleInput.addEventListener("keyup", function() {
+  if(((customInput_mobile.value !== "" && customInput_mobile.value !== "0") && (billAmount.value !== "" && billAmount.value !== "0")) && (tpeopleInput.value !== "" && tpeopleInput.value !== "0")){
+    errorMsg.style.display = "none"; 
+    totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+    let typedcustomInput = Number(customInput_mobile.value)/100;
+    console.log(((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2))
+    let customTip = ((Number(billValue)*typedcustomInput)/Number(totalPeopleValue)).toFixed(2)
+    let tBillPerPerson = ((Number(billValue)/Number(totalPeopleValue))+Number(customTip)).toFixed(2);
+      tipAmount.innerHTML = `$${customTip}`;
+      totalBill.innerHTML = `$${tBillPerPerson}`;
+      
+  }else{
+
+    if(tpeopleInput.value === "0"){
+      errorMsg.style.display = "block"; // Show error message
+      totalPeople.style.border = "1.4px solid #DC7E64";
+      return false;
+    }
+
+    errorMsg.style.display = "none"; 
+    totalPeople.style.border = "1.4px solid hsl(189, 41%, 97%)";
+   
+    ResetTipAndBill();
+  }
+
+});
+
+
+
+  

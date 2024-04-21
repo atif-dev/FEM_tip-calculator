@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +16,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    gap: 2.5em;
+    gap: 3em;
 }
 
 .logo{
@@ -133,12 +132,12 @@ input{
     align-items: center;
 }
 
-/* remove up and down arrow from UI for number type input */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 /* For Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
@@ -186,7 +185,7 @@ input[type="number"] {
 }
 
 .logo img{
-    width: 12%;
+    width: 9%;
 }
 
 .bill-input:hover{
@@ -206,10 +205,6 @@ input[type="number"] {
     background: hsl(189, 41%, 97%);
 }
 
-.tpeople:hover{
-    border: 1.4px solid hsl(172, 67%, 45%);
-}
-
 .pep-label_error-msg{
     display: flex;
     justify-content: space-between;
@@ -220,7 +215,7 @@ input[type="number"] {
     font-size: .68rem;
     font-weight: 700;
     color: #DC7E64;
-    /* display: none; */
+    display: none;
 }
 
 .tip-value2 input{
@@ -247,13 +242,13 @@ input[type="number"] {
     border: 1.4px solid hsl(172, 67%, 45%);
 }
 
-.custom-input::placeholder{
-    font-weight: 700;
-}
-
 .custom-input:focus::placeholder {
     color: transparent; /* Hide placeholder on focus (click) */
     border:none;
+}
+
+.custom-input {
+    font-weight: 700;
 }
 
 .bill-input:focus::placeholder{
@@ -262,11 +257,6 @@ input[type="number"] {
 
 .tpeople:focus::placeholder{
     color: transparent;
-}
-
-.bill-label_error-msg{
-    display: flex;
-    justify-content: space-between;
 }
 
 .attribution { font-size: 11px; text-align: center; margin-top: .5em; }
@@ -375,15 +365,10 @@ input[type="number"] {
         font-size: .9rem;
     }
 
-    .custom-input_mobile::placeholder{
-        font-weight: 700;
-    }
-
     .custom-input_mobile:focus::placeholder {
         color: transparent; /* Hide placeholder on focus (click) */
         border:none;
     }
 
 }
-
 

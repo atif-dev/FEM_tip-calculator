@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <main>
+    <div class="logo"><img src="images/logo.svg" alt=""></div>
+    <div class="sections">
+      <section class="section-one">
+        <label class="labels" for="bill">Bill</label>
+        <input class="bill-input" type="number" min="0" placeholder="0">
+        <label class="labels" for="select-tip" style="margin-top: 2.5em;">Select Tip %</label>
+        <div class="tips-values">
+          <div class="tip-value1">
+            <div>5%</div>
+            <div>10%</div>
+            <div>15%</div> 
+          </div>
+          <div class="tip-value2">
+            <div style="padding: .3em 1.5em;">25%</div>
+            <div style="padding: .3em 1.8em;">50%</div>
+            <input class="custom-input" type="number" placeholder="Custom" title="Custom input is in %">
+          </div>
+        </div>
+
+        <!-- mobile tip section -->
+        <div class="tips-values_mobile" style="display: none;">
+          <div class="tip-value1_mobile">
+            <div>5%</div>
+            <div>10%</div>
+          </div>
+          <div class="tip-value2_mobile">
+            <div style="padding: .3em 3.5em;">15%</div>
+            <div>25%</div> 
+          </div>
+          <div class="tip-value3_mobile">
+            <div>50%</div>
+            <input class="custom-input_mobile" type="number" placeholder="Custom" title="Custom input is in %">
+          </div>
+        </div>
+
+        <div class="pep-label_error-msg">
+          <label class="labels" for="number-of-people">Number of People</label>
+          <span class="error-msg">Can't be zero</span>
+        </div>
+        <input class="tpeople" type="number" placeholder="0">
+      </section>
+      <section class="section-two">
+        <div class="amounts">
+          <div class="section-two_sub1">
+            <p>Tip Amount<span>/ person</span></p>
+            <p class="tip-amount">$0.00</p>
+          </div>
+          <div class="section-two_sub2">
+            <p>Total<span>/ person</span></p>
+            <p class="total-amount">$0.00</p>
+          </div>
+        </div>
+        <div style="text-align: center;"><button class="reset-btn">Reset</button></div>
+      </section>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/atif-dev" target="_blank">Atif Iqbal</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

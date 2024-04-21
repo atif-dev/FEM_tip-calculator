@@ -1,0 +1,18 @@
+Desktop view:
+Mobile view:
+Desktop hover states:
+Mobile hover states:
+Desktop button actions:
+Mobile button actions:
+Deskstop exception messages:
+Mobile exception messages:
+Responsiveness in chrome and firefox:
+Responsiveness in LT browser:
+Responsiveness using Google mobile friendly test:
+GitHub Readme file:
+Github live link with summary:
+Frontendmentor deployment:
+After depoloyment at FEM, challenge written note review:
+----------------------------
+After some time review submitted challenge to review comments if any:
+Explore the code=>how other people have done the challenge:
