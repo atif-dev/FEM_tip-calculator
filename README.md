@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshots
 
-![PC View](https://github.com/atif-dev/fem_fylo-two-column-layout/blob/main/screenshots/desktop%201.png?raw=true)
-![Mobile view](https://github.com/atif-dev/fem_fylo-two-column-layout/blob/main/screenshots/mobile%201.png?raw=true)
+![PC View](https://github.com/atif-dev/FEM_tip-calculator/blob/master/screenshots/1366%20by%20768.png?raw=true)
+![Mobile view](https://github.com/atif-dev/FEM_tip-calculator/blob/master/screenshots/Galaxy%20Note%209.png?raw=true)
 
 ### Links
 
