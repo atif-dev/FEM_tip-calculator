@@ -1,7 +1,7 @@
 {
   "name": "tip-calculator",
   "version": "0.1.0",
-  "homepage": "https://atif-dev.github.io/atif-dev/FEM_tip-calculator/",
+  "homepage": "https://atif-dev.github.io/FEM_tip-calculator/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
