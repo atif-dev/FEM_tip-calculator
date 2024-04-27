@@ -34,10 +34,9 @@ Users should be able to:
 
 ### Links
 
+- Live Site URL: https://atif-dev.github.io/FEM_tip-calculator/
 - Frontend Mentor solution url:  https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-kJxiE1Llm-
-- Live Site URL: https://atif-dev.github.io/fem_huddle-landing-page/
-- Google Mobile Friendly Test: https://search.google.com/test/mobile-friendly/result?id=tX9n5HrIpdG_DKb87ISSvQ
-- GitHub repo : https://github.com/atif-dev/fem_fylo-two-column-layout
+- GitHub repo : https://github.com/atif-dev/FEM_tip-calculator/
 
 ## My process
 
