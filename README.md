@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: https://atif-dev.github.io/FEM_tip-calculator/
-- Frontend Mentor solution url:  https://www.frontendmentor.io/solutions/intro-component-with-sign-up-form-kJxiE1Llm-
+- Frontend Mentor solution url: https://www.frontendmentor.io/solutions/responsive-tip-calculator-using-react-js-qTFjPmAD0g
 - GitHub repo : https://github.com/atif-dev/FEM_tip-calculator/
 
 ## My process
