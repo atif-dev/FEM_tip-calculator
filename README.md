@@ -29,42 +29,45 @@ Users should be able to:
 
 ### Screenshots
 
-![PC View](https://github.com/atif-dev/FEM_tip-calculator/blob/master/screenshots/1366%20by%20768.png?raw=true)
-![Mobile view](https://github.com/atif-dev/FEM_tip-calculator/blob/master/screenshots/Galaxy%20Note%209.png?raw=true)
+![PC View]()
+![Mobile view]()
 
 ### Links
 
-- Live Site URL: https://atif-dev.github.io/FEM_tip-calculator/
-- Frontend Mentor solution url: https://www.frontendmentor.io/solutions/responsive-tip-calculator-using-react-js-qTFjPmAD0g
-- GitHub repo : https://github.com/atif-dev/FEM_tip-calculator/
+- Live Site URL: 
+- Frontend Mentor solution url:
 
 ## My process
 
-  - Used existing knowledge.
-  - React implementation.
-  - Google Bard and BalckBox AI for setting exceptions messages using React.
-  - Used LT browser for checking responsiveness.
+  React project to a better Vanilla JS project.
+- Improvements:
+  - UI.
+  - HTML+CSS+JS structure.
+  - JS code.
+  - Added Keyboard accessibility for PC view.
     
 ### Continued development
 
-  Will complete more frontendmentor challenges using React.
+  ~~Will complete more frontendmentor challenges using React.~~ => Don't have plans for React.
+  - With the help of GROK AI I found two screen readers(NVDA and VoiceOver). In future I will explore how to check/test accessibility.
+  - Will learn more about accessibility.
 
 ### Useful resources
 
 - [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Nice visual representation to understand CSS flexbox 
 - [Conquering Responsive Layouts](https://courses.kevinpowell.co/conquering-responsive-layouts) - This is nice short free course for learning responsiveness.
 - [Check responsiveness](https://www.lambdatest.com/mobile-view-website) - NICE website for checking responsiveness and taking good looking screen shots.
-- [Desktop app for checking responsiveness](https://responsively.app/) - Download windows application for checking responsiveness.
 - [Learn Resposiveness](https://web.dev/learn/design/) - Find about responsiveness.
 - [Learn centering in css](https://moderncss.dev/complete-guide-to-centering-in-css/) - Learn different possible ways for centering CSS.
-- [SCSS](https://moderncss.dev/complete-guide-to-centering-in-css/) - Learn to use SCSS using terminal.
-- [Deploy React App using GitHub](https://blog.logrocket.com/deploying-react-apps-github-pages/) - Nice article to deploy React app using Github pages.
-- [ChatGPT](https://chat.openai.com/) - Nice for getting help and getting solutions related to code.
-- [Google Gemini](https://gemini.google.com/) - Nice for getting help and getting solutions related to code.
-- [Blackbox AI](https://www.blackbox.ai/) - Nice for getting help and getting solutions related to code.
 
 ## Author
 
-- [atif_devs @ Twitter](https://twitter.com/atif_devs) and [Atif Iqbal @ Linkedin](https://www.linkedin.com/in/atif-iqbal-60b0aa125/). Come, Say Hi. Let's Connect for Learning and Sharing😇
+- [atif-dev @ Frontendmentor](https://www.frontendmentor.io/profile/atif-dev)
 
-----**Be NICE, COLLABORATE and have FUN building!** 🚀😎😇----
+## Acknowledgments
+
+Converted a react project to a better vanilla JS project. During building process I haved used Google and chatGPT(less frequency for both) in a right way. Also used chatGPT for code review.
+
+**✨Built in a right way and learn in a right way✨**  
+
+
