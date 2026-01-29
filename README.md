@@ -66,7 +66,7 @@ Users should be able to:
 
 ## Acknowledgments
 
-Converted a react project to a better vanilla JS project. During building process I haved used Google and chatGPT(less frequency for both) in a right way. Also used chatGPT for code review.
+Converted a react project to a better vanilla JS project. During building process I used Google and chatGPT(less frequency for both) in a right way. Also used chatGPT for code review.
 
 **✨Built in a right way and learn in a right way✨**  
 
