@@ -44,13 +44,13 @@ Users should be able to:
   - UI.
   - HTML+CSS+JS structure.
   - JS code.
-  - Added Keyboard accessibility for PC view.
+  - Added Keyboard accessibility for PC.
     
 ### Continued development
 
   ~~Will complete more frontendmentor challenges using React.~~ => Don't have plans for React.
   - With the help of GROK AI I found two screen readers(NVDA and VoiceOver). In future I will explore how to check/test accessibility.
-  - Will learn more about accessibility.
+  - Will learn more about accessibility and Google lighthouse.
 
 ### Useful resources
 
