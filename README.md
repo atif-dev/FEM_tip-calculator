@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: https://atif-dev.github.io/FEM_tip-calculator/ 
-- Frontend Mentor solution url:
+- Frontend Mentor solution url: https://www.frontendmentor.io/solutions/tip-calculator-using-vanilla-js-dN-EaG6sZY
 
 ## My process
 
